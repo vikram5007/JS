@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        #HEADING{
+            text-align: center;
+        }
+
+        #out {
+            position: relative;
+            margin-top: 100px;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+
+    <p id="out"> </p>
+    <p id="in"> </p>
+    <h1 id="HEADING"> </h1>
+
+<!-- BUTTON FUNC TO DISPLAY THE DETAILS -->
+
+    <script>
+
+
+
+        function display(){
+
+
+            document.write("<h1> PERSONAL DETAILS </h1> ");
+
+            var name = "VIKRAM R.V "; //var declaration 
+
+
+            let bd = "02/08/2001"; //let declaration 
+
+            const AGE=21;
+
+            var mobile=9843477779;
+
+
+            document.write("<h3> NAME IS : </h3> " + name + "<br>" + "<h3> DATE OF BIRTH : </h3>" + bd + "<br>" + "<h3> AGE IS : </h3>" + AGE + "<br>" + "<h3> MOBILE NO IS : </h3> " + mobile);//write printing statement 
+
+            
+        }
+
+
+
+
+    </script>
+
+
+
+<!-- BUTTON FUNC TO DISPLAY THE DETAILS -->
+   
+    <input type="button" onclick="display()" value="CLICK TO DISPLAY "> 
+
+    <script src="numberoper.js"></script>
+
+
+    <!-- BUTTON FUNC TO PERFORM OPERATIONS -->
+
+    <h3> ENTER A NUMBER TO PERFORM OPERATIONS : </h3>
+    <input type="text"  style="width:500px" id="inp"> <br>
+    <br>
+     <input type="button" name="perf" value="PERFECT NUMBER " onclick="perfect(inp)">
+     
+     <input type="button" name="fact" value="FACTORIAL NUMBER " onclick="facto(inp)">
+
+     <input type="button" name="fibo" value="FIBONACCI SERIES " onclick="fibo(inp)">
+
+<!-- BUTTON FUNC TO PERFORM IF ELSE CONDITIONS -->
+
+    <h3>ENTER YOUR GENDER : </h3>
+    <input type="text" style="width:500px" id="gender"> <br>
+    <input type="button" name="save" value="submit" onclick="gcheck(gender)">
+
+
+    
+
+
+    
+</body>
+
+</html>
