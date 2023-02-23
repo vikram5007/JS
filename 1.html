@@ -9,7 +9,18 @@
 
 
     <style>
-        #HEADING{
+        form {
+            background-color: aquamarine;
+            padding: 100px;
+            border: 5px solid black;
+        }
+
+        legend {
+            font-family: Impact, Haettenschweiler, sans-serif;
+            font-style: italic;
+        }
+
+        #HEADING {
             text-align: center;
         }
 
@@ -31,13 +42,13 @@
     <p id="in"> </p>
     <h1 id="HEADING"> </h1>
 
-<!-- BUTTON FUNC TO DISPLAY THE DETAILS -->
+    <!-- BUTTON FUNC TO DISPLAY THE DETAILS -->
 
     <script>
 
 
 
-        function display(){
+        function display() {
 
 
             document.write("<h1> PERSONAL DETAILS </h1> ");
@@ -47,14 +58,14 @@
 
             let bd = "02/08/2001"; //let declaration 
 
-            const AGE=21;
+            const AGE = 21;
 
-            var mobile=9843477779;
+            var mobile = 9843477779;
 
 
             document.write("<h3> NAME IS : </h3> " + name + "<br>" + "<h3> DATE OF BIRTH : </h3>" + bd + "<br>" + "<h3> AGE IS : </h3>" + AGE + "<br>" + "<h3> MOBILE NO IS : </h3> " + mobile);//write printing statement 
 
-            
+
         }
 
 
@@ -64,9 +75,9 @@
 
 
 
-<!-- BUTTON FUNC TO DISPLAY THE DETAILS -->
-   
-    <input type="button" onclick="display()" value="CLICK TO DISPLAY "> 
+    <!-- BUTTON FUNC TO DISPLAY THE DETAILS -->
+
+    <input type="button" onclick="display()" value="CLICK TO DISPLAY ">
 
     <script src="numberoper.js"></script>
 
@@ -74,25 +85,101 @@
     <!-- BUTTON FUNC TO PERFORM OPERATIONS -->
 
     <h3> ENTER A NUMBER TO PERFORM OPERATIONS : </h3>
-    <input type="text"  style="width:500px" id="inp"> <br>
+    <input type="text" style="width:500px" id="inp"> <br>
     <br>
-     <input type="button" name="perf" value="PERFECT NUMBER " onclick="perfect(inp)">
-     
-     <input type="button" name="fact" value="FACTORIAL NUMBER " onclick="facto(inp)">
+    <input type="button" name="perf" value="PERFECT NUMBER " onclick="perfect(inp)">
 
-     <input type="button" name="fibo" value="FIBONACCI SERIES " onclick="fibo(inp)">
+    <input type="button" name="fact" value="FACTORIAL NUMBER " onclick="facto(inp)">
 
-<!-- BUTTON FUNC TO PERFORM IF ELSE CONDITIONS -->
+    <input type="button" name="fibo" value="FIBONACCI SERIES " onclick="fibo(inp)">
+
+    <!-- BUTTON FUNC TO PERFORM IF ELSE CONDITIONS -->
 
     <h3>ENTER YOUR GENDER : </h3>
     <input type="text" style="width:500px" id="gender"> <br>
-    <input type="button" name="save" value="submit" onclick="gcheck(gender)">
+    <input type="button" name="save" value="IF ELSE IF " onclick="gcheck(gender)">
+    <input type="button" name="save" value="SWITCH  " onclick="gswitch(gender)">
+
+    <!-- FORM PRINTING  -->
+
+    <form id="res" action="" method="post">
+        <fieldset>
+            <legend style="text-align:center;">STUDENT DETAILS </legend>
+            <label>NAME: </label><br>
+            <input type="text" name="uname" required placeholder="ENTER YOUR NAME "><br><br>
+
+            <label> PASSWORD : </label><br>
+            <input type="password" name="pwd" required placeholder="ENTER YOUR PASSWORD "><br><br>
+
+            <label>GENDER : </label><br>
+            <input type="radio" name="gen" value="MALE" required>MALE
+            <input type="radio" name="gen" value="FEMALE" required>FEMALE <br><br>
+
+            <label>DATE OF BIRTH : </label>
+            <input type="date" required placeholder="select"><br><br>
+
+            <label> HIGH STUDIES : </label><br>
+            <select name="hs" placeholder="SELECT YOUR ">
+                <optgroup label="1st GROUP ">
+                    <option>BIOLOGY </option>
+                </optgroup>
+
+                <optgroup label="2nd GROUP ">
+                    <option>COMPUTER SCIENCE </option>
+                </optgroup>
+
+                <optgroup label="3RD GROUP ">
+                    <option>COMMERCE WITH BUSINESS MATHS </option>
+                    <option> COMMERCE WITH COMPUTER APPLICATIONS </option>
+                </optgroup>>
+
+            </select><br><br>
+
+            <label>MOBILE NO : </label>
+            <input class="M" type="tel" pattern="[0-9]{10}" placeholder="10 DIGIT PHONE NO WITHOUT COUNTRY CODE "
+                name="ph" required><br><br>
+
+            <label>TELEPHONE : </label>
+            <input class="M" type="tel" pattern="[0-3]{3}-[0-4]{4}-[0-3]{3}" placeholder="123-1234-123 "
+                required><br><br>
+
+            <label>ADDRESS : </label>
+            <textarea name="ad" placeholder="ENTER YOUR PERMANENT ADDRESS ALONG WITH YOUR PINCODE "></textarea><br><br>
 
 
-    
+
+            <input type="checkbox" value="Y" name="pass"> <label> REMEMBER PASSWORD </label><br><br>
 
 
-    
+            <button type="submit" onclick="disp(res)"> SUBMIT </button>
+
+    </form>
+    <h3 id=""></h3>
+
+    <script>
+        function disp() {
+            const forms = document.getElementById("res");
+
+            const name = forms.elements["uname"].value;
+            const gender = forms.elements["gen"].value;
+            const pho = forms.elements["ph"].value;
+            const address = forms.elements["ad"].value;
+
+
+            document.write("THE NAME OF THE PERSON IS : " + name + "<br>");
+            document.write("THE GENDER OF THE PERSON IS : " + gender + "<br>");
+            document.write("THE PHONE NO OF THE PERSON IS : " + pho + "<br>");
+            document.write("THE ADDRESS OF THE PERSON IS : " + address + "<br>");
+
+
+
+
+        }
+
+    </script>
+
+
+
 </body>
 
 </html>

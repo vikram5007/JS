@@ -12,9 +12,9 @@ function perfect() {
 
     }
     if (ori == sum) {
-    alert("THE ENTERED NUMBER IS A PERFECT NUMBER " + sum);
+        alert("THE ENTERED NUMBER IS A PERFECT NUMBER " + sum);
     } else {
-        alert("THE ENTERED NUMBER IS NOT A PERFECT NUMBER "+ sum );
+        alert("THE ENTERED NUMBER IS NOT A PERFECT NUMBER " + sum);
     }
 }
 
@@ -31,47 +31,78 @@ function facto() {
     } while (i <= num);
 
 
-    alert("THE FACTORIAL VALUE OF "+factorial);
+    alert("THE FACTORIAL VALUE OF " + factorial);
 
 
 }
 
-function fibo(){
-var range=document.getElementById('inp').value;
-var a,b,c;
-a=-1;
-b=1;
+function fibo() {
+    var range = document.getElementById('inp').value;
+    var a, b, c;
+    a = -1;
+    b = 1;
 
-var i=1;
-
-
-document.write("THE FIBONACCI SERIES OF THE GIVEN RANGE : ");
-while(i<=range){
-    c=a+b;
-    a=b;
-    b=c;
-    i++;
-
-    document.write(c + " ");
-
-}
+    var i = 1;
 
 
-}
+    document.write("THE FIBONACCI SERIES OF THE GIVEN RANGE : ");
+    while (i <= range) {
+        c = a + b;
+        a = b;
+        b = c;
+        i++;
 
-function gcheck(){
-var g=document.getElementById('gender').value;
+        document.write(c + " ");
 
-if(g=='M' || g=='M' || g=='male' || g=="MALE"){
-    alert("ENTERED GENDER IS MALE , IT IS VALID ENTRY ");
-
-}else if(g=='F' || g=='f' || g=='female' || g=="FEMALE"){
-alert("ENTERED GENDER IS MALE , IT IS VALID ENTRY ");
-
-}
-else{
-    alert(" IT IS INVALID DATA ENTRY ");
-}
+    }
 
 
 }
+
+function gcheck() {
+    var g = document.getElementById('gender').value;
+
+    if (g == 'M' || g == 'M' || g == 'male' || g == "MALE") {
+        alert("ENTERED VALUE IS MALE , IT IS VALID ENTRY ");
+
+    } else if (g == 'F' || g == 'f' || g == 'female' || g == "FEMALE") {
+        alert("ENTERED VALUE IS MALE , IT IS VALID ENTRY ");
+
+    }
+    else {
+        alert(" IT IS A INVALID DATA ENTRY ");
+    }
+
+
+}
+
+function gswitch() {
+    var g = document.getElementById('gender').value;
+
+    switch (g) {
+        case "male":
+            alert("ENTERED VALUE IS MALE , IT IS VALID ENTRY");
+            break;
+
+        case "MALE":
+            alert("ENTERED VALUE IS MALE , IT IS VALID ENTRY");
+            break;
+
+
+        case "female":
+            alert("ENTERED VALUE IS FEMALE , IT IS VALID ENTRY ");
+            break;
+
+        case "FEMALE":
+            alert("ENTERED VALUE IS FEMALE , IT IS VALID ENTRY ");
+            break;
+
+
+        default:
+            alert(" IT IS A INVALID DATA ENTRY ");
+    }
+
+
+
+}
+
